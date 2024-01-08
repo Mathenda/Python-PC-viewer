@@ -39,3 +39,9 @@ if battery:
     print(f"\nBattery Status: {plugged}, {battery.percent}%")
 else:
     print ("\nBattery information unavailable.")
+
+disk = psutil.disk_usage('/')
+print("\nDisk Information:")
+print(f"Total Disk Space: {disk.total / (1024 ** 3):.2f} GB")
+print(f"Used Disk Space: {disk.used / (1024 ** 3):.2f} GB")
+print(f"Free Disk Space: {disk.free / (1024 ** 3):.2f} GB")
